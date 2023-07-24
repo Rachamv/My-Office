@@ -20,9 +20,25 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['username'] = user.username
         token['email'] = user.email
         token['bio'] = user.profile.bio
-        token['image'] = str(user.profile.image)
+        token['profile_picture'] = str(user.profile.profile_picture)
         token['verified'] = user.profile.verified
-        # ...
+        token['date_of_birth'] = user.profile.date_of_birth
+        token['office_phone_number'] = user.profile.office_phone_number
+        token['mobile_number'] = user.profile.mobile_number
+        token['alternate_number'] = user.profile.alternate_number
+        token['language'] = user.profile.language
+        token['address_line_1'] = user.profile.address_line_1
+        token['address_line_2'] = user.profile.address_line_2
+        token['city'] = user.profile.city
+        token['state'] = user.profile.state
+        token['postal_code'] = user.profile.postal_code
+        token['country'] = user.profile.country
+        token['receive_notifications'] = user.profile.receive_notifications
+        token['theme'] = user.profile.theme
+        token['facebook_url'] = user.profile.facebook_url
+        token['twitter_url'] = user.profile.twitter_url
+        token['linkedin_url'] = user.profile.linkedin_url
+        
         return token
 
 

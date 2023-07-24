@@ -20,7 +20,7 @@ class Profile(models.Model):
     profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
     bio = models.TextField(blank=True)
     verified = models.BooleanField(default=False)
-    date_of_birth = models.DateField()
+    date_of_birth = models.DateField(null=True, blank=True)
     office_phone_number = models.CharField(max_length=20, null=True, blank=True)
     mobile_number = models.CharField(max_length=20, null=True, blank=True)
     alternate_number = models.CharField(max_length=20, null=True, blank=True)
